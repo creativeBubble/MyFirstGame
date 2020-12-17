@@ -32,4 +32,9 @@ public class Player {
 
     public void update() {
     }
+
+    public void setPosition(double positionX, double positionY) {
+        this.positionX=positionX;
+        this.positionY=positionY;
+    }
 }

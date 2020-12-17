@@ -20,6 +20,7 @@ public class Game extends SurfaceView implements SurfaceHolder.Callback {
     private final Player player;
 
 
+
     public Game(Context context) {
         /*
         super initializes parents class first (SurfaceView)
@@ -44,6 +45,9 @@ public class Game extends SurfaceView implements SurfaceHolder.Callback {
     public boolean onTouchEvent(MotionEvent event) {
         //Handles inputs
         switch(event.getAction()){
+            case MotionEvent.ACTION_DOWN:
+                player.setPosition((double) event.getX(), (double) event.getY());
+                return true;
 
         }
         return super.onTouchEvent(event);
